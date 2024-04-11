@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/bikes', bikesRouter); // 使用路由
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 app.listen(port, () => {
 	console.log(`监听这个${port}端口`);
 });
