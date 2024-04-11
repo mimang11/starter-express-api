@@ -23,8 +23,7 @@ app.get('/addcat', async (req, res) => {
 	//获取这个对象
 	let item = await animals.get('leo');
 	console.log(item);
-
-	res.send('当前没有任何数据!');
+	res.send('item!' + item);
 });
 
 app.listen(process.env.PORT || 3000);
