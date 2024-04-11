@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
+import { router as bikesRouter } from './Router/router.js';
 const CyclicDb = require('@cyclic.sh/dynamodb');
 //数据库名
-const db = CyclicDb('lazy-red-chinchilla-wearCyclicDB');
+//const db = CyclicDb('lazy-red-chinchilla-wearCyclicDB');
 //文档集合名
-const animals = db.collection('animals');
-app.all('/', (req, res) => {
+//const animals = db.collection('animals');
+/* app.all('/', (req, res) => {
 	console.log('Just got a request!');
 	res.send('Yo!');
 });
@@ -25,5 +26,13 @@ app.get('/addcat', (req, res) => {
 	console.log(item);
 	res.send('item!' + item);
 });
+ */
+app.use(express.json()); //json
+app.use(express.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT || 3000);
+app.use('/bikes', bikesRouter); // 使用路由
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+	console.log(`监听这个${port}端口`);
+});
