@@ -13,15 +13,15 @@ app.get('/getUser', (req, res) => {
 	console.log('Just got a request!');
 	res.send('当前没有任何数据!');
 });
-app.get('/addcat', async (req, res) => {
+app.get('/addcat', (req, res) => {
 	//创建对象
-	let leo = await animals.set('leo', {
+	let leo = animals.set('leo', {
 		type: 'cat',
 		color: 'orange'
 	});
 
 	//获取这个对象
-	let item = await animals.get('leo');
+	let item = animals.get('leo');
 	console.log(item);
 	res.send('item!' + item);
 });
