@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 import { router as bikesRouter } from './Router/router.js';
-const CyclicDb = require('@cyclic.sh/dynamodb');
 //数据库名
 //const db = CyclicDb('lazy-red-chinchilla-wearCyclicDB');
 //文档集合名
