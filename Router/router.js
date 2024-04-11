@@ -4,10 +4,11 @@ import { Router } from 'express';
 
 // Initialize Express router
 export const router = Router();
-import DynamoDb from '@cyclic.sh/dynamodb';
+import dyDb from '@cyclic.sh/dynamodb';
 
 // Initialize AWS DynamoDB 初始化数据库对象  使用cyclic的变量
-const db = DynamoDb(process.env.CYCLIC_DB);
+//const db = dyDb(process.env.CYCLIC_DB);
+const db = dyDb('lazy-red-chinchilla-wearCyclicDB');
 const bikesCollection = db.collection('bikes');
 
 // Get all bikes
