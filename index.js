@@ -1,4 +1,4 @@
-import { express } from 'express';
+import express from 'express';
 const app = express();
 import { router as bikesRouter } from './Router/router.js';
 //数据库名
