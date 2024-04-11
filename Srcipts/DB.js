@@ -1,4 +1,4 @@
-const CyclicDB = require('cyclic-dynamodb');
+/* const CyclicDB = require('cyclic-dynamodb');
 const db = CyclicDB('lazy-red-chinchilla-wearCyclicDB'); // find it on the Database/Storage tab
 
 const run = async function () {
@@ -15,3 +15,4 @@ const run = async function () {
 	console.log(item);
 };
 run();
+ */

@@ -4,7 +4,7 @@ import { Router } from 'express';
 
 // Initialize Express router
 export const router = Router();
-const DynamoDb = require('@cyclic.sh/dynamodb');
+import { DynamoDb } from '@cyclic.sh/dynamodb';
 
 // Initialize AWS DynamoDB 初始化数据库对象  使用cyclic的变量
 const db = DynamoDb(process.env.CYCLIC_DB);
